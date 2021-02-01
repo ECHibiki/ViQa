@@ -68,7 +68,7 @@ function refreshSettings_webm() {
     }
 }
 
-function setupControl_webm(control) {
+function setUpControl_webm(control) {
     if (control.addEventListener) control.addEventListener("change", function(e) {
         if (control.type == "checkbox") {
             changeSetting_webm(control.name, control.checked);
@@ -81,7 +81,7 @@ function setupControl_webm(control) {
 refreshSettings_webm();
 var settingsItems_webm = settingsMenu_webm.getElementsByTagName("input");
 for (var i = 0; i < settingsItems_webm.length; i++) {
-    setupControl(settingsItems_webm[i]);
+    setUpControl(settingsItems_webm[i]);
 }
 
 if (settingsMenu_webm.addEventListener && !window.Options) {
